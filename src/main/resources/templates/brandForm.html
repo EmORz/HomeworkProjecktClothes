@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Brand</title>
+</head>
+<body>
+
+<form action="/brands" th:action="@{/brands}" th:object="${brand}" method="post">
+  <label for="name">Име:</label>
+  <input type="text" id="name" th:field="*{name}" required>
+
+  <label for="yearOfEstablishment">Година на основаване:</label>
+  <input type="number" id="yearOfEstablishment" th:field="*{yearOfEstablishment}" required>
+
+  <label for="nationality">Националност:</label>
+  <input type="text" id="nationality" th:field="*{nationality}" required>
+
+  <button type="submit">Добави</button>
+</form>
+</body>
+</html>

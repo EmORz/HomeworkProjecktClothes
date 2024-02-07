@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothes</title>
+</head>
+<body>
+<h1>Списък с дрехи</h1>
+<ol>
+  <tr th:each="clothe:${clothes}">
+    <td th:text="${clothe.type}"></td>
+    <td th:text="${clothe.price}"></td>
+    <td th:text="${clothe.size}"></td>
+      <td th:text="${clothe.brand.getName()}"></td>
+      <td th:text="${clothe.brand.name}"></td>
+
+  </tr>
+</ol>
+</body>
+</html>
